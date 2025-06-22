@@ -137,7 +137,7 @@
 
     const uploadWidget = cloudinary.createUploadWidget({
       cloudName: "dog8ybtrn",
-      uploadPreset: "your_unsigned_upload_preset"
+      uploadPreset: "unsigned_preset"
     }, (error, result) => {
       if (!error && result && result.event === "success") {
         uploadedImageUrl = result.info.secure_url;
