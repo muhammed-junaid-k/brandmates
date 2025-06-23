@@ -1,419 +1,731 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Brandmates</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brandmates</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-<nav class="navbar navbar-expand-lg navbar-custom">
-  <div class="container-fluid position-relative">
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-    <!-- LOGO Centered -->
-    <a class="navbar-brand navbar-center-logo" href="#">
-      <img src="/img/logo black.png" alt="Logo" height="50" class="me-1">
-    </a>
-
-    <!-- Toggler (Mobile, now right-aligned) -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Navbar content -->
-    <div class="collapse navbar-collapse justify-content-between" id="navbarContent">
-      <!-- Left nav links (desktop only) -->
-      <ul class="navbar-nav gap-3 d-none d-lg-flex">
-        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-
-      <!-- Right auth buttons (desktop only) -->
-      <div class="d-none d-lg-flex align-items-center gap-3 ms-auto">
-        <a href="#contact">
-                  <button class="btn btn-signup">Get in touch with us</button>
-        </a>
-      </div>
-
-      <!-- Mobile menu (shown only when collapsed) -->
-      <div class="d-lg-none w-100 mt-3 text-center">
-        <ul class="navbar-nav gap-3">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-        <div class="mt-3 d-flex flex-column gap-2 align-items-center">
-        <a href="#contact">
-                  <button class="btn btn-signup">Get in touch with us</button>
-        </a>
-        </div>
-      </div>
+  <body>
+      <!-- Intro Animation -->
+  <div class="intro-wrapper">
+    <div class="logo-container">
+      <img src="/img/cursor.png" alt="Asterix" class="asterix" />
+      <img src="/img/animation.png" alt="Brandmates Text" class="logo-text" />
     </div>
   </div>
-</nav>
 
-<section class="hero" id="home">
-  <div class="container">
-    <div class="row align-items-center">
-      
-      <!-- Left Content -->
-      <div class="left col-lg-5 text-lg-start text-center">
-        <img src="/img/line1.png" alt="" class="line1" />
-        <h1 class="hero-title">
-          Building <span class="highlight">Brands</span> <br> That Resonates
-        </h1>
-                <p class="hero-subtext">
-        From logo to launch — your brand's creative command center.        </p>
-        <div class="hero-button">
-          <a href="/projects.html">See Our Works →</a>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container-fluid position-relative">
+        <!-- LOGO Centered -->
+        <a class="navbar-brand navbar-center-logo" href="#">
+          <img src="/img/logo black.png" alt="Logo" height="50" class="me-1" />
+        </a>
+
+        <!-- Toggler (Mobile, now right-aligned) -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar content -->
+        <div
+          class="collapse navbar-collapse justify-content-between"
+          id="navbarContent"
+        >
+          <!-- Left nav links (desktop only) -->
+          <ul class="navbar-nav gap-3 d-none d-lg-flex">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Right auth buttons (desktop only) -->
+          <div class="d-none d-lg-flex align-items-center gap-3 ms-auto">
+            <a href="#contact">
+              <button class="btn btn-signup">Get in touch with us</button>
+            </a>
+          </div>
+
+          <!-- Mobile menu (shown only when collapsed) -->
+          <div class="d-lg-none w-100 mt-3 text-center">
+            <ul class="navbar-nav gap-3">
+              <li class="nav-item">
+                <a class="nav-link" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+            <div class="mt-3 d-flex flex-column gap-2 align-items-center">
+              <a href="#contact">
+                <button class="btn btn-signup">Get in touch with us</button>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
+    </nav>
 
-      <!-- Right Image -->
-      <div class="col-lg-7 mt-4 mt-lg-0">
-      <div class="hero-image d-flex justify-content-center align-items-center">
-        <img src="/img/hero.png" alt="Hero Illustration" />
-      </div>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Content -->
+          <div class="left col-lg-5 text-lg-start text-center">
+            <img src="/img/line1.png" alt="" class="line1" />
+            <h1 class="hero-title">
+              Building <span class="highlight">Brands</span> <br />
+              That Resonates
+            </h1>
+            <p class="hero-subtext">
+              From logo to launch — your brand's creative command center.
+            </p>
+            <div class="hero-button">
+              <a href="/projects.html">See Our Works →</a>
+            </div>
+          </div>
+
+          <!-- Right Image -->
+          <div class="col-lg-7 mt-4 mt-lg-0">
+            <div
+              class="hero-image d-flex justify-content-center align-items-center"
+            >
+              <img src="/img/hero.png" alt="Hero Illustration" />
+            </div>
             <!-- <img src="/img/line2.png" alt="" class="line2" /> -->
-
-      </div>
-
-
-    </div>
-  </div>
-</section>
-<!-- Brand Logos Scroller Section -->
-<section class="brand-scroller pt-5 pb-4" >
-  <div class="scroll-container">
-    <div class="scroll-track">
-      <!-- Repeat logos to create loop illusion -->
-      <img src="https://via.placeholder.com/100x40?text=Brand+1" alt="Brand 1" />
-      <img src="https://via.placeholder.com/100x40?text=Brand+2" alt="Brand 2" />
-      <img src="https://via.placeholder.com/100x40?text=Brand+3" alt="Brand 3" />
-      <img src="https://via.placeholder.com/100x40?text=Brand+4" alt="Brand 4" />
-      <img src="https://via.placeholder.com/100x40?text=Brand+5" alt="Brand 5" />
-      <!-- Duplicate for seamless infinite scroll -->
-      <img src="https://via.placeholder.com/100x40?text=Brand+1" alt="Brand 1" />
-      <img src="https://via.placeholder.com/100x40?text=Brand+2" alt="Brand 2" />
-      <img src="https://via.placeholder.com/100x40?text=Brand+3" alt="Brand 3" />
-      <img src="https://via.placeholder.com/100x40?text=Brand+4" alt="Brand 4" />
-      <img src="https://via.placeholder.com/100x40?text=Brand+5" alt="Brand 5" />
-    </div>
-  </div>
-</section>
-<!-- about us Section -->
-<section class="about-us py-5" id="about">
-  <div class="container">
-    <div class="row align-items-center">
-      
-      <!-- Left Image -->
-      <div class="col-lg-6 mb-4 mb-lg-0 text-center">
-        <img src="/img/img1.png" alt="img1" class="img-fluid" style="max-width: 80%; height: auto;">
-      </div>
-      
-      <!-- Right Text -->
-      <div class="col-lg-6 text-lg-start text-center">
-        <h2 style="font-weight: 500; font-size: 2.2rem;">
-          We Provide <span style="background-color: #f4c15d; border-radius: 15px; padding: 0 10px; font-style: italic; font-family: 'Courier New', Courier, monospace;">Smart</span> Brand Solutions
-        </h2>
-        <p class="mt-3" style="max-width: 500px; color: #333; font-size: 0.95rem;">
-We're not just another creative agency. We're your brand's strategic partner, dedicated to crafting authentic, memorable brand experiences that connect with your audience. From concept to execution, we handle every aspect of your brand's visual and digital presence. <br> <br>
-With a team of passionate creatives, strategists, and digital experts, we transform ideas into impactful brand stories that drive results and create lasting impressions.
-
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="services-section py-5" id="services" style="background-color: #fdfdfd;">
-  <div class="container">
-    <!-- First row: Heading card + 1 service card -->
-    <div class="row mb-4">
-      <!-- Heading Card (Wide) -->
-      <div class="col-lg-8 col-md-12 mb-4">
-        <div class="p-4 rounded-4 h-100" style="background-color: #1a1a1a; color: white;">
-          <h3><span style="color: #f4c15d;">Our</span> Services</h3>
-          <h2 class="fw-bold">Special For You</h2>
-          <a href="#" class="btn btn-warning mt-3 px-4 py-2" style="border-radius: 30px;">
-            See All Services →
-          </a>
-        </div>
-      </div>
-
-      <!-- First Service Card -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="shadow-sm p-4 rounded-4 text-center bg-white h-100">
-          <img src="https://img.icons8.com/dusk/64/light-on--v1.png" alt="Branding" height="50" />
-          <h5 class="mt-3 fw-bold">Branding</h5>
-          <p class="mb-0 text-muted">Personal & Business Branding services tailored to your goals.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Second row: 4 cards -->
-    <div class="row">
-      <!-- Social Media Marketing -->
-      <div class="col-lg-3 col-md-6 col-6 mb-4">
-                <div class="shadow-sm p-4 rounded-4 text-center bg-white h-100">
-          <img src="https://img.icons8.com/dusk/64/monitor--v1.png" alt="Website Development" height="50" />
-          <h5 class="mt-3 fw-bold">Website Development</h5>
-          <p class="mb-0 text-muted">Responsive, SEO-optimized websites to grow your brand online.</p>
-        </div>
-
-      </div>
-
-      <!-- Marketing Collateral -->
-      <div class="col-lg-3 col-md-6 col-6 mb-4">
-                <div class="shadow-sm p-4 rounded-4 text-center bg-white h-100">
-          <img src="https://img.icons8.com/dusk/64/facebook-like.png" alt="Social Media Marketing" height="50" />
-          <h5 class="mt-3 fw-bold">Social Media Marketing</h5>
-          <p class="mb-0 text-muted">Grow your presence on Instagram, Facebook, LinkedIn, and more.</p>
-        </div>
-
-      </div>
-
-      <!-- Website Development -->
-      <div class="col-lg-3 col-md-6 col-6 mb-4">
-                <div class="shadow-sm p-4 rounded-4 text-center bg-white h-100">
-          <img src="https://img.icons8.com/dusk/64/google-web-search.png" alt="SEO" height="50" />
-          <h5 class="mt-3 fw-bold">SEO</h5>
-          <p class="mb-0 text-muted">Boost your visibility with smart SEO techniques and content.</p>
-        </div>
-
-      </div>
-
-      <!-- SEO -->
-      <div class="col-lg-3 col-md-6 col-6 mb-4">
-                <div class="shadow-sm p-4 rounded-4 text-center bg-white h-100">
-          <img src="https://img.icons8.com/dusk/64/marketing.png" alt="Performance Marketing" height="50" />
-          <h5 class="mt-3 fw-bold">Performance Marketing</h5>
-          <p class="mb-0 text-muted">Data-driven campaigns to maximize return on investment.</p>
-        </div>
-
-
-      </div>
-    </div>
-
-    <!-- Third row: 4 cards -->
-    <div class="row">
-      <!-- Outdoor Advertising -->
-      <div class="col-lg-3 col-md-6 col-6 mb-4">
-        <div class="shadow-sm p-4 rounded-4 text-center bg-white h-100">
-          <img src="https://img.icons8.com/dusk/64/billboard.png" alt="Outdoor Advertising" height="50" />
-          <h5 class="mt-3 fw-bold">Outdoor Advertising</h5>
-          <p class="mb-0 text-muted">Street-level visibility through billboards, posters, and more.</p>
-        </div>
-      </div>
-
-      <!-- Packaging Design -->
-      <div class="col-lg-3 col-md-6 col-6 mb-4">
-        <div class="shadow-sm p-4 rounded-4 text-center bg-white h-100">
-          <img src="https://img.icons8.com/dusk/64/product.png" alt="Packaging Design" height="50" />
-          <h5 class="mt-3 fw-bold">Packaging Design</h5>
-          <p class="mb-0 text-muted">Stylish and smart product packaging tailored to your brand.</p>
-        </div>
-      </div>
-
-      <!-- Production -->
-      <div class="col-lg-3 col-md-6 col-6 mb-4">
-        <div class="shadow-sm p-4 rounded-4 text-center bg-white h-100">
-          <img src="https://img.icons8.com/dusk/64/movie-projector.png" alt="Production" height="50" />
-          <h5 class="mt-3 fw-bold">Production</h5>
-          <p class="mb-0 text-muted">Photos & videos that bring your brand story to life.</p>
-        </div>
-      </div>
-
-      <!-- Performance Marketing -->
-      <div class="col-lg-3 col-md-6 col-6 mb-4">
-                        <div class="shadow-sm p-4 rounded-4 text-center bg-white h-100">
-          <img src="https://img.icons8.com/dusk/64/copy.png" alt="Marketing Collateral" height="50" />
-          <h5 class="mt-3 fw-bold">Marketing Collateral</h5>
-          <p class="mb-0 text-muted">Brochures, flyers, presentations and more.</p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-<div class="text-center">
-  <a href="#" class="btn btn-warning mt-3 px-4 py-2" style="border-radius: 30px;">
-    See Our Best Works →
-  </a>
-</div>
-
-</section>
-
-<section class="py-5 bg-dark text-white" style="background-color: #1a1a1a;">
-  <div class="container">
-    <div class="row align-items-center">
-      <!-- Left Side Content -->
-      <div class="col-lg-6 mb-4 mb-lg-0">
-        <h2 class="fw-bold">It's easy to start 
-          <span class="px-2 py-1 rounded-5" style="background-color: #f4c15d; font-style: italic;">Branding</span>
-        </h2>
-        <p class="text-white mt-3">
-          Our streamlined process helps you launch your brand without confusion.
-          We focus on making it simple and impactful so you can stand out confidently.
-        </p>
-
-        <!-- Steps -->
-        <div class="mt-4">
-          <div class="d-flex mb-4">
-            <div class="rounded-circle bg-warning text-white fw-bold d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">1</div>
-            <div>
-              <h6 class="fw-bold mb-1">Discovery & Strategy</h6>
-              <p class="text-white mb-0">We learn about your business, goals, and audience to develop a strategic foundation.</p>
-            </div>
-          </div>
-
-          <div class="d-flex mb-4">
-            <div class="rounded-circle bg-warning text-white fw-bold d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">2</div>
-            <div>
-              <h6 class="fw-bold mb-1">Creative Development</h6>
-              <p class="text-white mb-0">Our team creates concepts that align with your brand strategy and business objectives.</p>
-            </div>
-          </div>
-
-          <div class="d-flex">
-            <div class="rounded-circle bg-warning text-white fw-bold d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">3</div>
-            <div>
-              <h6 class="fw-bold mb-1">Implementation & Launch</h6>
-              <p class="text-white mb-0">We execute the approved concepts across all relevant platforms and channels.</p>
-            </div>
           </div>
         </div>
       </div>
-
-      <!-- Right Side Image -->
-      <div class="col-lg-6 text-center">
-        <img src="/img/img2.png" 
-             alt="Branding Illustration" class="img-fluid" style="max-height: 350px;">
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="py-5" id="contact">
-  <div class="container">
-    <div class="card p-4 p-md-5 rounded-4 border-0 shadow" style="background-color: #f8c365;">
-      <div class="row align-items-start gy-4">
-        
-        <!-- Contact Info -->
-        <div class="col-lg-5">
-          <h3 class="fw-bold mb-3">Contact Us</h3>
-          <p class="mb-3">We're here to support your branding and marketing needs.</p>
-          <ul class="list-unstyled">
-            <li class="mb-2"><strong>📞 Phone:</strong> +91 98765 43210</li>
-            <li class="mb-2"><strong>📧 Email:</strong> hello@brandmates.com</li>
-            <li class="mb-2"><strong>💬 WhatsApp:</strong> <a href="https://wa.me/919876543210" target="_blank">Chat on WhatsApp</a></li>
-            <li class="mb-2"><strong>📍 Address:</strong> Kochi, Kerala, India</li>
-          </ul>
-        </div>
-
-        <!-- Basin Form -->
-        <div class="col-lg-7">
-          <form action="https://usebasin.com/f/2971cc5115bc" method="POST">
-            <!-- Replace with your Basin form endpoint -->
-
-  <div class="row g-3">
-    <!-- Name -->
-    <div class="col-md-6">
-      <input type="text" class="form-control" name="name" placeholder="Your Name" required>
-    </div>
-
-    <!-- Email -->
-    <div class="col-md-6">
-      <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-    </div>
-
-    <!-- Phone -->
-    <div class="col-12">
-      <input type="tel" class="form-control" name="phone" placeholder="Phone Number" required>
-    </div>
-
-    <!-- Message -->
-    <div class="col-12">
-      <textarea class="form-control" name="message" rows="4" placeholder="Your Message" required></textarea>
-    </div>
-
-    <!-- Submit -->
-    <div class="col-12 text-center text-lg-start">
-      <button type="submit" class="btn btn-dark mt-2 px-4 py-2 rounded-pill">
-        Send Message →
-      </button>
-    </div>
-  </div>
-          </form>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Outer background container with spacing -->
-<div class="foot" style="background-color: #1a1a1a; border-top-left-radius: 40px; border-top-right-radius: 40px; margin: 0 70px;">
-  <footer class="pt-5 pb-3 text-white">
-    <div class="container px-4 px-md-5">
-      <div class="row gy-4">
-        <!-- Brand Column -->
-        <div class="col-lg-4 col-md-6">
-          <h5 class="fw-bold mb-3">
-            <img src="/img/logo.png" alt="Brandmates" height="50" class="me-2">
-          </h5>
-          <p class="text-white-50">
-            Elevate your brand identity with powerful digital strategies and creative branding.
-          </p>
-          <p class="text-white-50 mb-0 small">© Brandmates 2025. All rights reserved.</p>
-        </div>
-
-        <!-- Company -->
-        <div class="col-lg-2 col-md-6">
-          <h6 class="fw-bold mb-3">Company</h6>
-          <ul class="list-unstyled text-white-50 small">
-            <li><a href="#" class="text-white-50 text-decoration-none">About Us</a></li>
-            <li><a href="#" class="text-white-50 text-decoration-none">Careers</a></li>
-            <li><a href="#" class="text-white-50 text-decoration-none">Contact</a></li>
-            <li><a href="/login.html" class="text-white-50 text-decoration-none">Admin</a></li>
-          </ul>
-        </div>
-
-        <!-- Services -->
-        <div class="col-lg-3 col-md-6">
-          <h6 class="fw-bold mb-3">Services</h6>
-          <ul class="list-unstyled text-white-50 small">
-            <li><a href="#" class="text-white-50 text-decoration-none">Branding</a></li>
-            <li><a href="#" class="text-white-50 text-decoration-none">Web Development</a></li>
-            <li><a href="#" class="text-white-50 text-decoration-none">Social Media</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact Info -->
-        <div class="col-lg-3 col-md-6">
-          <h6 class="fw-bold mb-3">Contact</h6>
-          <ul class="list-unstyled text-white-50 small">
-            <li><span>Email:</span> hello@brandmates.com</li>
-            <li><span>Phone:</span> +91 98765 43210</li>
-            <li><span>WhatsApp:</span> +91 98765 43210</li>
-          </ul>
-          <a href="#" class="text-white-50 text-decoration-none small d-block mt-3">Terms & Privacy Policy</a>
+    </section>
+    <!-- Brand Logos Scroller Section -->
+    <section class="brand-scroller pt-5 pb-4">
+      <div class="scroll-container">
+        <div class="scroll-track">
+          <!-- Repeat logos to create loop illusion -->
+          <img
+            src="https://via.placeholder.com/100x40?text=Brand+1"
+            alt="Brand 1"
+          />
+          <img
+            src="https://via.placeholder.com/100x40?text=Brand+2"
+            alt="Brand 2"
+          />
+          <img
+            src="https://via.placeholder.com/100x40?text=Brand+3"
+            alt="Brand 3"
+          />
+          <img
+            src="https://via.placeholder.com/100x40?text=Brand+4"
+            alt="Brand 4"
+          />
+          <img
+            src="https://via.placeholder.com/100x40?text=Brand+5"
+            alt="Brand 5"
+          />
+          <!-- Duplicate for seamless infinite scroll -->
+          <img
+            src="https://via.placeholder.com/100x40?text=Brand+1"
+            alt="Brand 1"
+          />
+          <img
+            src="https://via.placeholder.com/100x40?text=Brand+2"
+            alt="Brand 2"
+          />
+          <img
+            src="https://via.placeholder.com/100x40?text=Brand+3"
+            alt="Brand 3"
+          />
+          <img
+            src="https://via.placeholder.com/100x40?text=Brand+4"
+            alt="Brand 4"
+          />
+          <img
+            src="https://via.placeholder.com/100x40?text=Brand+5"
+            alt="Brand 5"
+          />
         </div>
       </div>
+    </section>
+    <!-- about us Section -->
+    <section class="about-us py-5" id="about">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Image -->
+          <div class="col-lg-6 mb-4 mb-lg-0 text-center" data-aos="fade-right">
+            <img
+              src="/img/img1.png"
+              alt="img1"
+              class="img-fluid"
+              style="max-width: 80%; height: auto"
+            />
+          </div>
+
+          <!-- Right Text -->
+          <div
+            class="col-lg-6 text-lg-start text-center"
+            data-aos="fade-left"
+            data-aos-delay="100"
+          >
+            <h2 style="font-weight: 500; font-size: 2.2rem">
+              We Provide
+              <span
+                style="
+                  background-color: #f4c15d;
+                  border-radius: 15px;
+                  padding: 0 10px;
+                  font-style: italic;
+                  font-family: 'Courier New', Courier, monospace;
+                "
+                >Smart</span
+              >
+              Brand Solutions
+            </h2>
+            <p
+              class="mt-3"
+              style="max-width: 500px; color: #aaa; font-size: 0.95rem"
+            >
+              We're not just another creative agency. We're your brand's
+              strategic partner, dedicated to crafting authentic, memorable
+              brand experiences that connect with your audience. From concept to
+              execution, we handle every aspect of your brand's visual and
+              digital presence.
+              <br /><br />
+              With a team of passionate creatives, strategists, and digital
+              experts, we transform ideas into impactful brand stories that
+              drive results and create lasting impressions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="services-section py-5"
+      id="services"
+      style="background-color: #fdfdfd"
+    >
+      <div class="container">
+        <!-- First row: Heading card + 1 service card -->
+        <div class="row mb-4">
+          <!-- Heading Card (Wide) -->
+          <div class="col-lg-8 col-md-12 mb-4" data-aos="fade-right">
+            <div
+              class="p-4 rounded-4 h-100"
+              style="background-color: #1a1a1a; color: white"
+            >
+              <h3><span style="color: #f4c15d">Our</span> Services</h3>
+              <h2 class="fw-bold">Special For You</h2>
+              <a
+                href="#"
+                class="btn btn-warning mt-3 px-4 py-2"
+                style="border-radius: 30px"
+              >
+                See All Services →
+              </a>
+            </div>
+          </div>
+
+          <!-- First Service Card -->
+          <div
+            class="col-lg-4 col-md-6 mb-4"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <div class="shadow-sm p-4 rounded-4 text-center bg-white h-100">
+              <img
+                src="https://img.icons8.com/dusk/64/light-on--v1.png"
+                alt="Branding"
+                height="50"
+              />
+              <h5 class="mt-3 fw-bold">Branding</h5>
+              <p class="mb-0 text-muted">
+                Personal & Business Branding services tailored to your goals.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second row: 4 cards -->
+        <div class="row">
+          <div
+            class="col-lg-3 col-md-6 col-6 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="shadow-sm p-4 rounded-4 text-center bg-white h-100">
+              <img
+                src="https://img.icons8.com/dusk/64/monitor--v1.png"
+                alt="Website Development"
+                height="50"
+              />
+              <h5 class="mt-3 fw-bold">Website Development</h5>
+              <p class="mb-0 text-muted">
+                Responsive, SEO-optimized websites to grow your brand online.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-3 col-md-6 col-6 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="shadow-sm p-4 rounded-4 text-center bg-white h-100">
+              <img
+                src="https://img.icons8.com/dusk/64/facebook-like.png"
+                alt="Social Media Marketing"
+                height="50"
+              />
+              <h5 class="mt-3 fw-bold">Social Media Marketing</h5>
+              <p class="mb-0 text-muted">
+                Grow your presence on Instagram, Facebook, LinkedIn, and more.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-3 col-md-6 col-6 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="shadow-sm p-4 rounded-4 text-center bg-white h-100">
+              <img
+                src="https://img.icons8.com/dusk/64/google-web-search.png"
+                alt="SEO"
+                height="50"
+              />
+              <h5 class="mt-3 fw-bold">SEO</h5>
+              <p class="mb-0 text-muted">
+                Boost your visibility with smart SEO techniques and content.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-3 col-md-6 col-6 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="shadow-sm p-4 rounded-4 text-center bg-white h-100">
+              <img
+                src="https://img.icons8.com/dusk/64/marketing.png"
+                alt="Performance Marketing"
+                height="50"
+              />
+              <h5 class="mt-3 fw-bold">Performance Marketing</h5>
+              <p class="mb-0 text-muted">
+                Data-driven campaigns to maximize return on investment.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Third row: 4 cards -->
+        <div class="row">
+          <div
+            class="col-lg-3 col-md-6 col-6 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="shadow-sm p-4 rounded-4 text-center bg-white h-100">
+              <img
+                src="https://img.icons8.com/dusk/64/billboard.png"
+                alt="Outdoor Advertising"
+                height="50"
+              />
+              <h5 class="mt-3 fw-bold">Outdoor Advertising</h5>
+              <p class="mb-0 text-muted">
+                Street-level visibility through billboards, posters, and more.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-3 col-md-6 col-6 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="shadow-sm p-4 rounded-4 text-center bg-white h-100">
+              <img
+                src="https://img.icons8.com/dusk/64/product.png"
+                alt="Packaging Design"
+                height="50"
+              />
+              <h5 class="mt-3 fw-bold">Packaging Design</h5>
+              <p class="mb-0 text-muted">
+                Stylish and smart product packaging tailored to your brand.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-3 col-md-6 col-6 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="shadow-sm p-4 rounded-4 text-center bg-white h-100">
+              <img
+                src="https://img.icons8.com/dusk/64/movie-projector.png"
+                alt="Production"
+                height="50"
+              />
+              <h5 class="mt-3 fw-bold">Production</h5>
+              <p class="mb-0 text-muted">
+                Photos & videos that bring your brand story to life.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-3 col-md-6 col-6 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="shadow-sm p-4 rounded-4 text-center bg-white h-100">
+              <img
+                src="https://img.icons8.com/dusk/64/copy.png"
+                alt="Marketing Collateral"
+                height="50"
+              />
+              <h5 class="mt-3 fw-bold">Marketing Collateral</h5>
+              <p class="mb-0 text-muted">
+                Brochures, flyers, presentations and more.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center" data-aos="zoom-in" data-aos-delay="200">
+        <a
+          href="projects.html"
+          class="btn btn-warning mt-3 px-4 py-2"
+          style="border-radius: 30px"
+        >
+          See Our Best Works →
+        </a>
+      </div>
+    </section>
+
+    <section class="py-5 text-white" style="background-color: #1a1a1a;">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Side Content -->
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <h2 class="fw-bold">
+              It's easy to start
+              <span
+                class="px-2 py-1 rounded-5"
+                style="background-color: #f4c15d; font-style: italic"
+                >Branding</span
+              >
+            </h2>
+            <p class="text-white mt-3">
+              Our streamlined process helps you launch your brand without
+              confusion. We focus on making it simple and impactful so you can
+              stand out confidently.
+            </p>
+
+            <!-- Steps -->
+            <div class="mt-4">
+              <div class="d-flex mb-4 align-items-start">
+                <div class="step-bubble me-3">1</div>
+                <div>
+                  <h6 class="fw-bold mb-1">Discovery & Strategy</h6>
+                  <p class="text-white mb-0">
+                    We learn about your business, goals, and audience to develop
+                    a strategic foundation.
+                  </p>
+                </div>
+              </div>
+
+              <div class="d-flex mb-4 align-items-start">
+                <div class="step-bubble me-3">2</div>
+                <div>
+                  <h6 class="fw-bold mb-1">Creative Development</h6>
+                  <p class="text-white mb-0">
+                    Our team creates concepts that align with your brand
+                    strategy and business objectives.
+                  </p>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start">
+                <div class="step-bubble me-3">3</div>
+                <div>
+                  <h6 class="fw-bold mb-1">Implementation & Launch</h6>
+                  <p class="text-white mb-0">
+                    We execute the approved concepts across all relevant
+                    platforms and channels.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side Image -->
+          <div class="col-lg-6 text-center">
+            <img
+              src="/img/img2.png"
+              alt="Branding Illustration"
+              class="img-fluid"
+              style="max-height: 350px"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5" id="contact">
+      <div class="container">
+        <div
+          class="card p-4 p-md-5 rounded-4 border-0 shadow"
+          style="background-color: #f8c365"
+        >
+          <div class="row align-items-start gy-4">
+            <!-- Contact Info -->
+            <div class="col-lg-5">
+              <h3 class="fw-bold mb-3">Contact Us</h3>
+              <p class="mb-3">
+                We're here to support your branding and marketing needs.
+              </p>
+              <ul class="list-unstyled">
+                <li class="mb-2"><strong>📞 Phone:</strong> +91 98765 43210</li>
+                <li class="mb-2">
+                  <strong>📧 Email:</strong> hello@brandmates.com
+                </li>
+                <li class="mb-2">
+                  <strong>💬 WhatsApp:</strong>
+                  <a href="https://wa.me/919876543210" target="_blank"
+                    >Chat on WhatsApp</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <strong>📍 Address:</strong> Kochi, Kerala, India
+                </li>
+              </ul>
+            </div>
+
+            <!-- Basin Form -->
+            <div class="col-lg-7">
+              <form action="https://usebasin.com/f/2971cc5115bc" method="POST">
+                <!-- Replace with your Basin form endpoint -->
+
+                <div class="row g-3">
+                  <!-- Name -->
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="name"
+                      placeholder="Your Name"
+                      required
+                    />
+                  </div>
+
+                  <!-- Email -->
+                  <div class="col-md-6">
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      placeholder="Your Email"
+                      required
+                    />
+                  </div>
+
+                  <!-- Phone -->
+                  <div class="col-12">
+                    <input
+                      type="tel"
+                      class="form-control"
+                      name="phone"
+                      placeholder="Phone Number"
+                      required
+                    />
+                  </div>
+
+                  <!-- Message -->
+                  <div class="col-12">
+                    <textarea
+                      class="form-control"
+                      name="message"
+                      rows="4"
+                      placeholder="Your Message"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <!-- Submit -->
+                  <div class="col-12 text-center text-lg-start">
+                    <button
+                      type="submit"
+                      class="btn btn-dark mt-2 px-4 py-2 rounded-pill"
+                    >
+                      Send Message →
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Outer background container with spacing -->
+    <div
+      class="foot"
+      style="
+        background-color: #1a1a1a;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        margin: 0 70px;
+      "
+    >
+      <footer class="pt-5 pb-3 text-white">
+        <div class="container px-4 px-md-5">
+          <div class="row gy-4">
+            <!-- Brand Column -->
+            <div class="col-lg-4 col-md-6">
+              <h5 class="fw-bold mb-3">
+                <img
+                  src="/img/logo.png"
+                  alt="Brandmates"
+                  height="50"
+                  class="me-2"
+                />
+              </h5>
+              <p class="text-white-50">
+                Elevate your brand identity with powerful digital strategies and
+                creative branding.
+              </p>
+              <p class="text-white-50 mb-0 small">
+                © Brandmates 2025. All rights reserved.
+              </p>
+            </div>
+
+            <!-- Company -->
+            <div class="col-lg-2 col-md-6">
+              <h6 class="fw-bold mb-3">Company</h6>
+              <ul class="list-unstyled text-white-50 small">
+                <li>
+                  <a href="#about" class="text-white-50 text-decoration-none"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-white-50 text-decoration-none"
+                    >Careers</a
+                  >
+                </li>
+                <li>
+                  <a href="#contact" class="text-white-50 text-decoration-none"
+                    >Contact</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/login.html"
+                    class="text-white-50 text-decoration-none"
+                    >Admin</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="col-lg-3 col-md-6">
+              <h6 class="fw-bold mb-3">Services</h6>
+              <ul class="list-unstyled text-white-50 small">
+                <li>
+                  <a href="#" class="text-white-50 text-decoration-none"
+                    >Branding</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-white-50 text-decoration-none"
+                    >Web Development</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-white-50 text-decoration-none"
+                    >Social Media</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-lg-3 col-md-6">
+              <h6 class="fw-bold mb-3">Contact</h6>
+              <ul class="list-unstyled text-white-50 small">
+                <li><span>Email:</span> hello@brandmates.com</li>
+                <li><span>Phone:</span> +91 98765 43210</li>
+                <li><span>WhatsApp:</span> +91 98765 43210</li>
+              </ul>
+              <a
+                href="#"
+                class="text-white-50 text-decoration-none small d-block mt-3"
+                >Terms & Privacy Policy</a
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
-  </footer>
-</div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // animation duration in ms
+        once: true, // only animate once
+        easing: "ease-in-out",
+      });
+    </script>
+<script>
+  setTimeout(() => {
+    document.querySelector('.intro-wrapper').classList.add('fade-out');
 
+    setTimeout(() => {
+      document.querySelector('.intro-wrapper').style.display = 'none';
 
+      // Show main content smoothly
+      const mainContent = document.getElementById('main-content');
+      mainContent.style.display = 'block';
+      setTimeout(() => {
+        mainContent.classList.add('visible');
+      }, 50); // Allow display block to apply first
+    }, 1400); // Match fade-out transition duration
+  }, 2700); // Delay before exit starts
+</script>
 
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>
