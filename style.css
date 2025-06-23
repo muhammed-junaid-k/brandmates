@@ -121,7 +121,7 @@
 
     @media (max-width: 768px) {
     .hero {
-      height: 85vh;
+      height: 100vh;
     }
       .hero-title {
         padding-left: 0%;

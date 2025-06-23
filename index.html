@@ -3,7 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brandmates</title>
+    <!-- Primary Meta Tags -->
+    <title>Brandmates – Creative Branding Agency</title>
+    <meta name="title" content="Brandmates – Creative Branding Agency" />
+    <meta
+      name="description"
+      content="From logo to launch, Brandmates is your creative command center. We build brands that resonate through design, strategy, and digital presence."
+    />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://brandmates.in/" />
+    <meta property="og:title" content="Brandmates – Creative Branding Agency" />
+    <meta
+      property="og:description"
+      content="From logo to launch, Brandmates is your creative command center. We build brands that resonate through design, strategy, and digital presence."
+    />
+    <meta
+      name="keywords"
+      content="Brandmates, branding agency, branding agency in Kerala, branding agencies in Kerala, branding Kerala, logo design, digital marketing, creative agency, brand strategy, brand identity, website design, packaging design, social media marketing, SEO, advertising agencies in Kochi, best advertising agency in Kerala, advertising agency in Kerala, Kerala design agency, creative solutions"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,13 +34,13 @@
   </head>
 
   <body>
-      <!-- Intro Animation -->
-  <div class="intro-wrapper">
-    <div class="logo-container">
-      <img src="/img/cursor.png" alt="Asterix" class="asterix" />
-      <img src="/img/animation.png" alt="Brandmates Text" class="logo-text" />
+    <!-- Intro Animation -->
+    <div class="intro-wrapper">
+      <div class="logo-container">
+        <img src="/img/cursor.png" alt="Asterix" class="asterix" />
+        <img src="/img/animation.png" alt="Brandmates Text" class="logo-text" />
+      </div>
     </div>
-  </div>
 
     <nav class="navbar navbar-expand-lg navbar-custom">
       <div class="container-fluid position-relative">
@@ -432,7 +451,7 @@
       </div>
     </section>
 
-    <section class="py-5 text-white" style="background-color: #1a1a1a;">
+    <section class="py-5 text-white" style="background-color: #1a1a1a">
       <div class="container">
         <div class="row align-items-center">
           <!-- Left Side Content -->
@@ -710,22 +729,21 @@
         easing: "ease-in-out",
       });
     </script>
-<script>
-  setTimeout(() => {
-    document.querySelector('.intro-wrapper').classList.add('fade-out');
-
-    setTimeout(() => {
-      document.querySelector('.intro-wrapper').style.display = 'none';
-
-      // Show main content smoothly
-      const mainContent = document.getElementById('main-content');
-      mainContent.style.display = 'block';
+    <script>
       setTimeout(() => {
-        mainContent.classList.add('visible');
-      }, 50); // Allow display block to apply first
-    }, 1400); // Match fade-out transition duration
-  }, 2700); // Delay before exit starts
-</script>
+        document.querySelector(".intro-wrapper").classList.add("fade-out");
 
+        setTimeout(() => {
+          document.querySelector(".intro-wrapper").style.display = "none";
+
+          // Show main content smoothly
+          const mainContent = document.getElementById("main-content");
+          mainContent.style.display = "block";
+          setTimeout(() => {
+            mainContent.classList.add("visible");
+          }, 50); // Allow display block to apply first
+        }, 1400); // Match fade-out transition duration
+      }, 2700); // Delay before exit starts
+    </script>
   </body>
 </html>
