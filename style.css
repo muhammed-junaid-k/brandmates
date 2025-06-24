@@ -2,10 +2,12 @@
       margin: 0;
       overflow-x: hidden;
       width: 100%;
+      background-color: #000000;
+
     }
 
     .navbar-custom {
-      background-color: #f8c365;
+      background-color: #000000;
       padding: 1rem 1.5rem;
       position: relative;
       padding-left: 100px;
@@ -13,11 +15,12 @@
     }
 
     .btn-signup {
-      background-color: #000 !important;
-      color: #e1e423 !important;
+      background-color: transparent;
+      border: 1.5px solid #ffffff !important;
+      color: #ffffff !important;
+      font-weight: 500;
+      padding: 0.6rem 1.4rem;
       border-radius: 999px;
-      padding: 6px 16px;
-      border: none;
     }
 
     /* .btn-signup:hover {
@@ -63,7 +66,7 @@
 }
 .hero {
       padding: 4rem 1rem;
-      background-color: #f8c365;
+      background-color: #000000;
       height: 87vh;
     }
 
@@ -75,8 +78,8 @@
     }
 
     .hero-title .highlight {
-      background-color: #000;
-      color: #e1e423;
+      background-color: #e1e423;
+      color: #000000;
       padding: 0.4rem 0.9rem;
       border-radius: 50px;
       display: inline-block;
@@ -86,7 +89,7 @@
 
     .hero-subtext {
       font-size: 1rem;
-      color: #333;
+      color: #ffffff;
       margin-top: 1rem;
       max-width: 400px;
       padding-left: 50px;
@@ -99,8 +102,8 @@
 
     .hero-button a {
       background-color: transparent;
-      border: 1.5px solid #000;
-      color: #000;
+      border: 1.5px solid #ffffff;
+      color: #ffffff;
       font-weight: 500;
       padding: 0.6rem 1.4rem;
       border-radius: 999px;
