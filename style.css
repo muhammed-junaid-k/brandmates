@@ -121,7 +121,7 @@
 
     @media (max-width: 768px) {
     .hero {
-      height: 100vh;
+      height: 90vh;
     }
       .hero-title {
         padding-left: 0%;
@@ -236,6 +236,22 @@
     }
   }
 
+
+  .blog-card-img {
+    height: 220px;
+    object-fit: cover;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+
+.foot{
+  background-color: #1a1a1a;
+    background-image: radial-gradient(#ffffff20 1px, transparent 1px);
+    background-size: 20px 20px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    margin: 0 70px;
+}
 
 
 
