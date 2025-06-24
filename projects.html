@@ -18,35 +18,111 @@
 
     <style>
       body {
-        background-color: #000;
-        background-image: radial-gradient(#ffffff20 1px, transparent 1px);
+        background-color: #fefefe;
         color: #fff;
+      }
+      .btn-outline-dark:hover {
+        background-color: transparent !important;
+        color: #000000 !important;
+        border-color: #000000 !important;
+        box-shadow: none !important;
       }
 
       .project-card {
-        background-color: #1a1a1a;
-        border: 1px solid #333;
-        border-radius: 20px;
+        background-color: #fefefe;
+        border-radius: 24px;
         overflow: hidden;
+        height: 100%;
         display: flex;
         flex-direction: column;
-        height: 100%;
-        position: relative;
-        padding: 1.2rem;
-        transition: 0.3s;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+        border: 1px solid #eee;
       }
 
       .project-card img {
         width: 100%;
-        height: 220px;
+        height: auto;
         object-fit: cover;
-        border-radius: 12px;
-        margin-bottom: 1rem;
+        border-bottom: 1px solid #eee;
       }
 
+      .project-card .card-body {
+        padding: 1.5rem;
+        flex: 1;
+      }
+.project-card {
+  background: transparent;
+  border: none;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+}
+
+.project-card .img-wrapper {
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.project-card .card-body {
+  background: transparent;
+  padding: 0.8rem 0 0;
+  box-shadow: none;
+  border: none;
+  flex-grow: 1;
+}
+
+.project-card h5 {
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  background: transparent;
+}
+
+.project-card button {
+  background: transparent;
+  border: 1px solid #000;
+  color: #000;
+  border-radius: 50px;
+  padding: 6px 16px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  box-shadow: none;
+}
+
+.project-card button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
       .project-card h5 {
-        color: #ffffff;
-        margin-top: 0.5rem;
+        color: #000;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+        font-size: 1.1rem;
+      }
+
+      .project-card p {
+        color: #444;
+        font-size: 0.95rem;
       }
 
       .category-badge {
@@ -61,6 +137,7 @@
         font-weight: bold;
         font-family: "Segoe UI", sans-serif;
       }
+
       #docModal .modal-content {
         background-color: #ffffff;
         color: #000000;
@@ -100,13 +177,13 @@
       >
         <a
           href="index.html"
-          class="btn btn-outline-light btn-light text-dark px-3 py-2 rounded-pill fw-semibold"
+          class="btn btn-outline-dark text-dark px-3 py-2 rounded-pill fw-semibold"
         >
           Back To Home
         </a>
         <a
           href="index.html#contact"
-          class="btn btn-outline-light btn-light text-dark px-3 py-2 rounded-pill fw-semibold"
+          class="btn btn-outline-dark text-dark px-3 py-2 rounded-pill fw-semibold"
         >
           Get In Touch With Us
         </a>
@@ -114,14 +191,14 @@
 
       <br />
 
-      <h2 class="text-center mb-3">Our Projects</h2>
-      <h3 class="text-center mb-4">
+      <h2 class="text-center text-dark mb-3">Our Projects</h2>
+      <h3 class="text-center text-dark mb-4">
         Your brand’s best
         <span
           class="highlight"
           style="
-            background-color: #f8c365;
-            color: #000000;
+            background-color: #000000;
+            color: #e1e423;
             padding: 0.4rem 0.9rem;
             border-radius: 50px;
             display: inline-block;
@@ -184,22 +261,21 @@
         querySnapshot.forEach((doc) => {
           const data = doc.data();
           const docBtn = data.docUrl
-            ? `<button class='btn btn-sm btn-outline-light mt-2' onclick="openDoc('${data.docUrl}')">read the story</button>`
+            ? `<button class='btn btn-sm btn-outline-dark mt-2' onclick="openDoc('${data.docUrl}')">Read the story</button>`
             : "";
 
           const card = `
-            <div class="col-lg-4 col-md-6 mb-4 d-flex" data-aos="fade-up">
-              <div class="project-card w-100">
-                <div class="position-relative">
-                  <span class="category-badge">${
-                    data.category || "General"
-                  }</span>
-                  <img src="${data.imageUrl}" alt="${data.title}">
-                </div>
-                <h5>${data.title}</h5>
-                ${docBtn}
-              </div>
-            </div>`;
+  <div class="col-lg-4 col-md-6 mb-4 d-flex" data-aos="fade-up">
+    <div class="project-card w-100">
+      <div class="img-wrapper">
+        <img src="${data.imageUrl}" alt="${data.title}" />
+      </div>
+      <div class="card-body">
+        <h5>${data.title}</h5>
+        ${docBtn}
+      </div>
+    </div>
+  </div>`;
           container.innerHTML += card;
         });
 
@@ -207,12 +283,10 @@
       }
 
       window.openDoc = async (url, title) => {
-        // Show loading message
         document.getElementById("docContent").innerHTML =
           "<p class='text-center fw-semibold'>⏳ Loading document, please wait...</p>";
         document.querySelector("#docModal .modal-title").textContent = title;
 
-        // Show the modal immediately
         const modal = new bootstrap.Modal(document.getElementById("docModal"));
         modal.show();
 
@@ -222,7 +296,6 @@
 
           const result = await mammoth.convertToHtml({ arrayBuffer });
 
-          // Replace loading with actual content
           document.getElementById("docContent").innerHTML = result.value;
         } catch (err) {
           document.getElementById("docContent").innerHTML =

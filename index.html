@@ -67,12 +67,11 @@
         >
           <!-- Left nav links (desktop only) -->
           <ul class="navbar-nav gap-3 d-none d-lg-flex">
-            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
+              <a class="nav-link" href="#about">Who we are</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#services">Services</a>
+              <a class="nav-link" href="#services">What we do</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#blog">Blog</a>
@@ -102,8 +101,9 @@
                 <a class="nav-link" href="#services">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
+                <a class="nav-link" href="#blog">Blog</a>
               </li>
+
             </ul>
             <div class="mt-3 d-flex flex-column gap-2 align-items-center">
               <a href="#contact">
@@ -115,36 +115,34 @@
       </div>
     </nav>
 
-    <section class="hero" id="home">
-      <div class="container">
-        <div class="row align-items-center">
-          <!-- Left Content -->
-          <div class="left col-lg-5 text-lg-start text-center">
-            <img src="/img/line1.png" alt="" class="line1" />
-            <h1 class="hero-title">
-              Building <span class="highlight">Brands</span> <br />
-              That Resonates
-            </h1>
-            <p class="hero-subtext">
-              From logo to launch — your brand's creative command center.
-            </p>
-            <div class="hero-button">
-              <a href="/projects.html">See Our Works →</a>
-            </div>
-          </div>
-
-          <!-- Right Image -->
-          <div class="col-lg-7 mt-4 mt-lg-0">
-            <div
-              class="hero-image d-flex justify-content-center align-items-center"
-            >
-              <img src="/img/hero.png" alt="Hero Illustration" />
-            </div>
-            <!-- <img src="/img/line2.png" alt="" class="line2" /> -->
-          </div>
+<section class="hero" id="home">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Content -->
+      <div class="left col-lg-5 text-lg-start text-center" data-aos="fade-right" data-aos-delay="600" data-aos-duration="1000">
+        <img src="/img/line1.png" alt="" class="line1" />
+        <h1 class="hero-title">
+          Building <span class="highlight">Brands</span> <br />
+          That Resonates
+        </h1>
+        <p class="hero-subtext">
+          From logo to launch — your brand's creative command center.
+        </p>
+        <div class="hero-button">
+          <a href="/projects.html">See Our Works →</a>
         </div>
       </div>
-    </section>
+
+      <!-- Right Image -->
+      <div class="col-lg-7 mt-4 mt-lg-0" data-aos="fade-left" data-aos-delay="800" data-aos-duration="1000">
+        <div class="hero-image d-flex justify-content-center align-items-center">
+          <img src="/img/hero.png" alt="Hero Illustration" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
     <!-- Brand Logos Scroller Section -->
     <section class="brand-scroller pt-5 pb-4">
       <div class="scroll-container">
@@ -318,7 +316,7 @@
               <h3><span style="color: #e1e423">Our</span> Services</h3>
               <h2 class="fw-bold">Special For You</h2>
               <a
-                href="#"
+                href="#services"
                 class="btn btn-warning mt-3 px-4 py-2"
                 style="border-radius: 30px; background-color: #e1e423"
               >
@@ -595,53 +593,93 @@
       </div>
     </section>
 
-<section class="container py-5" id="blog">
-  <div class="text-center mb-5" data-aos="fade-up">
-    <h2 class="fw-bold">From Our Blog</h2>
-    <p class="text-muted">Insights and strategies to elevate your brand</p>
-  </div>
+    <section class="container py-5" id="blog">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="fw-bold">From Our Blog</h2>
+        <p class="text-muted">Insights and strategies to elevate your brand</p>
+      </div>
 
-  <div class="row g-4">
-    <!-- Blog Card 1 -->
-    <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-      <div class="card h-100 shadow-sm border-0">
-        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=60" 
-             class="card-img-top blog-card-img" alt="Why Branding Matters" loading="lazy" />
-        <div class="card-body">
-          <h5 class="card-title fw-bold">Why Branding Matters: Building a Memorable Business Identity</h5>
-          <p class="card-text text-muted">Discover why branding is the cornerstone of every successful business and how it shapes perception, trust, and recognition.</p>
-          <a href="branding-importance.html" class="btn btn-outline-dark btn-sm">Read More</a>
+      <div class="row g-4">
+        <!-- Blog Card 1 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="card h-100 shadow-sm border-0">
+            <img
+              src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=60"
+              class="card-img-top blog-card-img"
+              alt="Why Branding Matters"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-bold">
+                Why Branding Matters: Building a Memorable Business Identity
+              </h5>
+              <p class="card-text text-muted">
+                Discover why branding is the cornerstone of every successful
+                business and how it shapes perception, trust, and recognition.
+              </p>
+              <a
+                href="branding-importance.html"
+                class="btn btn-outline-dark btn-sm"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Card 2 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card h-100 shadow-sm border-0">
+            <img
+              src="https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=600&q=60"
+              class="card-img-top blog-card-img"
+              alt="Kerala Branding"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-bold">
+                How to Create a Brand Strategy That Works in 2025
+              </h5>
+              <p class="card-text text-muted">
+                Learn step-by-step how to develop a future-ready brand strategy
+                that connects emotionally and stands out in a crowded market.
+              </p>
+              <a
+                href="brand-strategy-2025.html"
+                class="btn btn-outline-dark btn-sm"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Card 3 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card h-100 shadow-sm border-0">
+            <img
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=60"
+              class="card-img-top blog-card-img"
+              alt="Digital Branding Tips"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-bold">
+                Top 5 Branding Trends to Watch in 2025
+              </h5>
+              <p class="card-text text-muted">
+                Stay ahead of the curve by exploring the emerging branding
+                trends that will shape businesses and consumer expectations in
+                2025.
+              </p>
+              <a
+                href="branding-trends-2025.html"
+                class="btn btn-outline-dark btn-sm"
+                >Read More</a
+              >
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- Blog Card 2 -->
-    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-      <div class="card h-100 shadow-sm border-0">
-        <img src="https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=600&q=60" class="card-img-top blog-card-img" alt="Kerala Branding" loading="lazy" />
-        <div class="card-body">
-          <h5 class="card-title fw-bold">How to Create a Brand Strategy That Works in 2025</h5>
-          <p class="card-text text-muted">Learn step-by-step how to develop a future-ready brand strategy that connects emotionally and stands out in a crowded market.</p>
-          <a href="brand-strategy-2025.html" class="btn btn-outline-dark btn-sm">Read More</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Blog Card 3 -->
-    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-      <div class="card h-100 shadow-sm border-0">
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=60" 
-             class="card-img-top blog-card-img" alt="Digital Branding Tips" loading="lazy" />
-        <div class="card-body">
-          <h5 class="card-title fw-bold">Top 5 Branding Trends to Watch in 2025</h5>
-          <p class="card-text text-muted">Stay ahead of the curve by exploring the emerging branding trends that will shape businesses and consumer expectations in 2025.</p>
-          <a href="branding-trends-2025.html" class="btn btn-outline-dark btn-sm">Read More</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+    </section>
 
     <section class="py-5" id="contact">
       <div class="container">
@@ -658,7 +696,9 @@
                 We're here to support your branding and marketing needs.
               </p>
               <ul class="list-unstyled">
-                <li class="mb-2"><strong>📞 Phone:</strong> +91 9633020201, +91 9809241824</li>
+                <li class="mb-2">
+                  <strong>📞 Phone:</strong> +91 9633020201, +91 9809241824
+                </li>
                 <li class="mb-2">
                   <strong>📧 Email:</strong> info@brandmates.in
                 </li>
@@ -739,89 +779,155 @@
       </div>
     </section>
 
-
-
     <!-- FAQ Section -->
-<section class="container py-5" id="faq">
-  <div class="text-center mb-5" data-aos="fade-up">
-    <h2 class="fw-bold">Frequently Asked Questions</h2>
-    <p class="text-muted">Everything you need to know about our services</p>
-  </div>
+    <section class="container py-5" id="faq">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="fw-bold">Frequently Asked Questions</h2>
+        <p class="text-muted">Everything you need to know about our services</p>
+      </div>
 
-  <div class="accordion accordion-flush shadow-sm" id="faqAccordion">
-    <!-- Q1 -->
-    <div class="accordion-item mb-3" data-aos="fade-up" data-aos-delay="100">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed bg-light fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-          What is included in your branding service?
-        </button>
-      </h2>
-      <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-        <div class="accordion-body bg-white">
-          Our branding service includes logo design, brand identity, tone of voice, and a full brand strategy customized for your business.
+      <div class="accordion accordion-flush shadow-sm" id="faqAccordion">
+        <!-- Q1 -->
+        <div
+          class="accordion-item mb-3"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-light fw-semibold"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq1"
+            >
+              What is included in your branding service?
+            </button>
+          </h2>
+          <div
+            id="faq1"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body bg-white">
+              Our branding service includes logo design, brand identity, tone of
+              voice, and a full brand strategy customized for your business.
+            </div>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div
+          class="accordion-item mb-3"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-light fw-semibold"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq2"
+            >
+              Do you offer complete website development?
+            </button>
+          </h2>
+          <div
+            id="faq2"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body bg-white">
+              Yes, we provide full-stack development services with modern,
+              responsive, and SEO-optimized websites for all industries.
+            </div>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div
+          class="accordion-item mb-3"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-light fw-semibold"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq3"
+            >
+              How do you handle social media marketing?
+            </button>
+          </h2>
+          <div
+            id="faq3"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body bg-white">
+              We manage your brand’s social presence, create content, run
+              targeted ads, and track performance to grow your engagement.
+            </div>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div
+          class="accordion-item mb-3"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-light fw-semibold"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq4"
+            >
+              What does your SEO service include?
+            </button>
+          </h2>
+          <div
+            id="faq4"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body bg-white">
+              Our SEO service covers keyword strategy, on-page optimization,
+              backlinks, technical audits, and monthly performance tracking.
+            </div>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div
+          class="accordion-item mb-3"
+          data-aos="fade-up"
+          data-aos-delay="500"
+        >
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-light fw-semibold"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq5"
+            >
+              Do you offer outdoor advertising solutions?
+            </button>
+          </h2>
+          <div
+            id="faq5"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body bg-white">
+              Absolutely. We design and manage outdoor ads like hoardings,
+              banners, and billboards tailored for maximum local visibility.
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- Q2 -->
-    <div class="accordion-item mb-3" data-aos="fade-up" data-aos-delay="200">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed bg-light fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-          Do you offer complete website development?
-        </button>
-      </h2>
-      <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-        <div class="accordion-body bg-white">
-          Yes, we provide full-stack development services with modern, responsive, and SEO-optimized websites for all industries.
-        </div>
-      </div>
-    </div>
-
-    <!-- Q3 -->
-    <div class="accordion-item mb-3" data-aos="fade-up" data-aos-delay="300">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed bg-light fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-          How do you handle social media marketing?
-        </button>
-      </h2>
-      <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-        <div class="accordion-body bg-white">
-          We manage your brand’s social presence, create content, run targeted ads, and track performance to grow your engagement.
-        </div>
-      </div>
-    </div>
-
-    <!-- Q4 -->
-    <div class="accordion-item mb-3" data-aos="fade-up" data-aos-delay="400">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed bg-light fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-          What does your SEO service include?
-        </button>
-      </h2>
-      <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-        <div class="accordion-body bg-white">
-          Our SEO service covers keyword strategy, on-page optimization, backlinks, technical audits, and monthly performance tracking.
-        </div>
-      </div>
-    </div>
-
-    <!-- Q5 -->
-    <div class="accordion-item mb-3" data-aos="fade-up" data-aos-delay="500">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed bg-light fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
-          Do you offer outdoor advertising solutions?
-        </button>
-      </h2>
-      <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-        <div class="accordion-body bg-white">
-          Absolutely. We design and manage outdoor ads like hoardings, banners, and billboards tailored for maximum local visibility.
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+    </section>
 
     <!-- Outer background container with spacing -->
     <div
@@ -915,9 +1021,9 @@
                 <li><span>WhatsApp:</span> +91 96330 20201</li>
               </ul>
               <a
-                href="#"
+                href="#faqAccordion"
                 class="text-white-50 text-decoration-none small d-block mt-3"
-                >Terms & Privacy Policy</a
+                >FAQ</a
               >
             </div>
           </div>

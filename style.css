@@ -14,7 +14,7 @@
 
     .btn-signup {
       background-color: #000 !important;
-      color: #fff !important;
+      color: #e1e423 !important;
       border-radius: 999px;
       padding: 6px 16px;
       border: none;
@@ -76,7 +76,7 @@
 
     .hero-title .highlight {
       background-color: #000;
-      color: #f8c365;
+      color: #e1e423;
       padding: 0.4rem 0.9rem;
       border-radius: 50px;
       display: inline-block;
