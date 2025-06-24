@@ -5,170 +5,128 @@
     <title>Our Projects | Brandmates</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="favicon.png" />
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/mammoth/mammoth.browser.min.js"></script>
-
     <style>
       body {
-  background-color: #0e0e0e;
-  color: #ffffff;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  z-index: 0;
-  overflow-x: hidden;
-}
+        background-color: #0e0e0e;
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        z-index: 0;
+        overflow-x: hidden;
+      }
 
-/* Animated dot pattern */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 200%;
-  background-image: radial-gradient(#ffffff10 1px, transparent 1px);
-  background-size: 18px 18px;
-  animation: floatDots 20s linear infinite;
-  z-index: -1;
-  opacity: 1;
-}
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: 200%;
+        background-image: radial-gradient(#ffffff10 1px, transparent 1px);
+        background-size: 18px 18px;
+        animation: floatDots 20s linear infinite;
+        z-index: -1;
+        opacity: 1;
+      }
 
-/* Animation to move the dots diagonally */
-@keyframes floatDots {
-  0% {
-    transform: translate(0%, 0%);
-  }
-  100% {
-    transform: translate(-10%, -10%);
-  }
-}
+      @keyframes floatDots {
+        0% { transform: translate(0%, 0%); }
+        100% { transform: translate(-10%, -10%); }
+      }
 
-.btn-outline-light:hover {
-  background-color: transparent !important;
-  color: #ffffff !important;
-  border-color: #ffffff !important;
-  box-shadow: none !important;
-}
-
+      .btn-outline-light:hover {
+        background-color: transparent !important;
+        color: #ffffff !important;
+        border-color: #ffffff !important;
+        box-shadow: none !important;
+      }
 
       .project-card {
-        background-color: #fefefe;
-        border-radius: 24px;
-        overflow: hidden;
-        height: 100%;
+        background: transparent;
+        border: none;
+        text-align: left;
         display: flex;
         flex-direction: column;
+        height: 100%;
         transition: all 0.3s ease;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-        border: 1px solid #eee;
+      }
+
+      .img-wrapper {
+        background-color: #f1f1f1;
+        border-radius: 20px;
+        overflow: hidden;
+        width: 100%;
+        height: 320px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       .project-card img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        border-bottom: 1px solid #eee;
+        height: 100%;
+        width: auto;
+        object-fit: contain;
       }
 
-      .project-card .card-body {
-        padding: 1.5rem;
-        flex: 1;
+      .card-body {
+        background: transparent;
+        padding: 0.8rem 0 0;
+        box-shadow: none;
+        border: none;
+        flex-grow: 1;
       }
-.project-card {
-  background: transparent;
-  border: none;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  transition: all 0.3s ease;
-  /* padding: 0.5rem; */
-}
-
-.project-card .img-wrapper {
-  background-color: #f1f1f1;
-  border-radius: 20px;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: 320px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.project-card img {
-  height: 100%;
-  width: auto;
-  object-fit: contain;
-  transition: transform 0.3s;
-}
-
-.project-card .card-body {
-  background: transparent;
-  padding: 0.8rem 0 0;
-  box-shadow: none;
-  border: none;
-  flex-grow: 1;
-}
-
-.project-card h5 {
-  color: #ffffff;
-  font-size: 1rem;
-  font-weight: 600;
-  margin: 0 0 0.5rem;
-  background: transparent;
-}
-
-.project-card button {
-  background: transparent;
-  border: 1px solid #ffffff;
-  color: #ffffff;
-  border-radius: 50px;
-  padding: 6px 16px;
-  font-size: 0.9rem;
-  transition: all 0.2s ease;
-  box-shadow: none;
-  margin-left: 10px;
-}
-
-.project-card button:hover {
-  background-color: #ffffff !important;
-  color: #000000;
-}
 
       .project-card h5 {
         color: #ffffff;
-        margin-bottom: 0.5rem;
-        font-weight: 700;
-        font-size: 1.1rem;
+        font-size: 1rem;
+        font-weight: 600;
+        margin: 0 0 0.5rem;
       }
 
-      .project-card p {
-        color: #444;
-        font-size: 0.95rem;
-      }
-
-      .category-badge {
-        position: absolute;
-        top: 15px;
-        left: 15px;
-        background-color: #000000;
+      .project-card button {
+        background: transparent;
+        border: 1px solid #ffffff;
         color: #ffffff;
-        padding: 4px 12px;
-        font-size: 0.8rem;
+        border-radius: 50px;
+        padding: 6px 16px;
+        font-size: 0.9rem;
+        transition: all 0.2s ease;
+        box-shadow: none;
+        margin-left: 10px;
+      }
+
+      .project-card button:hover {
+        background-color: #ffffff !important;
+        color: #000000;
+      }
+
+      .category-filter {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+        margin-bottom: 30px;
+      }
+
+      .category-filter button {
+        background: transparent;
+        border: 1px solid #ffffff50;
+        color: #ffffff;
+        padding: 6px 16px;
         border-radius: 30px;
-        font-weight: bold;
-        font-family: "Segoe UI", sans-serif;
+        font-size: 0.9rem;
+        transition: 0.2s;
+      }
+
+      .category-filter button.active,
+      .category-filter button:hover {
+        background-color: #ffffff;
+        color: #000000;
+        border-color: #ffffff;
       }
 
       #docModal .modal-content {
@@ -186,15 +144,6 @@ body::before {
         display: block;
       }
 
-      #docContent h1,
-      #docContent h2,
-      #docContent h3,
-      #docContent h4,
-      #docContent h5,
-      #docContent h6 {
-        font-weight: bold;
-      }
-
       @media (max-width: 768px) {
         #docModal .modal-content {
           padding: 1rem;
@@ -204,22 +153,9 @@ body::before {
   </head>
   <body>
     <div class="container py-5 position-relative">
-      <div
-        class="position-absolute top-0 start-0 mt-3 ms-3 d-flex gap-2"
-        style="z-index: 10"
-      >
-        <a
-          href="index.html"
-          class="btn btn-outline-light text-light px-3 py-2 rounded-pill fw-semibold"
-        >
-          Back To Home
-        </a>
-        <a
-          href="index.html#contact"
-          class="btn btn-outline-light text-light px-3 py-2 rounded-pill fw-semibold"
-        >
-          Get In Touch With Us
-        </a>
+      <div class="position-absolute top-0 start-0 mt-3 ms-3 d-flex gap-2" style="z-index: 10">
+        <a href="index.html" class="btn btn-outline-light text-light px-3 py-2 rounded-pill fw-semibold">Back To Home</a>
+        <a href="index.html#contact" class="btn btn-outline-light text-light px-3 py-2 rounded-pill fw-semibold">Get In Touch With Us</a>
       </div>
 
       <br />
@@ -227,37 +163,20 @@ body::before {
       <h2 class="text-center text-light mb-3">Our Projects</h2>
       <h3 class="text-center text-light mb-4">
         Your brand’s best
-        <span
-          class="highlight"
-          style="
-            background-color: #e1e423;
-            color: #000000;
-            padding: 0.4rem 0.9rem;
-            border-radius: 50px;
-            display: inline-block;
-            font-style: italic;
-            font-family: 'Courier New', Courier, monospace;
-          "
-        >
-          mate
-        </span>
+        <span class="highlight" style="background-color: #e1e423; color: #000000; padding: 0.4rem 0.9rem; border-radius: 50px; display: inline-block; font-style: italic; font-family: 'Courier New', Courier, monospace;">mate</span>
         in creativity.
       </h3>
 
+      <div class="category-filter" id="filterButtons"></div>
       <div class="row" id="projectCards"></div>
     </div>
 
-    <!-- Modal for Doc Viewer -->
     <div class="modal fade" id="docModal" tabindex="-1">
       <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content bg-white text-dark">
           <div class="modal-header">
             <h5 class="modal-title"></h5>
-            <button
-              type="button"
-              class="btn-close btn-close-dark"
-              data-bs-dismiss="modal"
-            ></button>
+            <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="modal"></button>
           </div>
           <div class="modal-body">
             <div id="docContent">Loading...</div>
@@ -266,14 +185,9 @@ body::before {
       </div>
     </div>
 
-    <!-- Firebase + AOS Scripts -->
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-      import {
-        getFirestore,
-        collection,
-        getDocs,
-      } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+      import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
       const firebaseConfig = {
         apiKey: "AIzaSyB2XFz4NmlrAma1sMzUK6VeNorTx3NfFq8",
@@ -281,58 +195,79 @@ body::before {
         projectId: "brandmate-34910",
         storageBucket: "brandmate-34910.appspot.com",
         messagingSenderId: "391847329187",
-        appId: "1:391847329187:web:49964d445880051f49ae16",
+        appId: "1:391847329187:web:49964d445880051f49ae16"
       };
 
       const app = initializeApp(firebaseConfig);
       const db = getFirestore(app);
 
+      let allProjects = [];
+
       async function loadProjects() {
         const querySnapshot = await getDocs(collection(db, "projects"));
-        const container = document.getElementById("projectCards");
+        allProjects = [];
 
         querySnapshot.forEach((doc) => {
-          const data = doc.data();
-          const docBtn = data.docUrl
-            ? `<button class='btn btn-sm btn-outline-dark mt-2' onclick="openDoc('${data.docUrl}')">Read the story</button>`
-            : "";
-
-          const card = `
-  <div class="col-lg-4 col-md-6 mb-4 d-flex" data-aos="fade-up">
-    <div class="project-card w-100">
-      <div class="img-wrapper">
-        <img src="${data.imageUrl}" alt="${data.title}" />
-      </div>
-      <div class="card-body">
-        <h5>${data.title}</h5>
-        ${docBtn}
-      </div>
-    </div>
-  </div>`;
-          container.innerHTML += card;
+          allProjects.push(doc.data());
         });
 
-        AOS.refresh();
+        renderProjects(allProjects);
+        renderFilterButtons();
+      }
+
+      function renderFilterButtons() {
+        const container = document.getElementById("filterButtons");
+        const categories = ["All", ...new Set(allProjects.map(p => p.category).filter(Boolean))];
+
+        container.innerHTML = categories.map(cat => `
+          <button class="btn" onclick="filterByCategory('${cat}')">${cat}</button>
+        `).join("");
+
+        container.querySelector("button").classList.add("active");
+      }
+
+      window.filterByCategory = (category) => {
+        const buttons = document.querySelectorAll(".category-filter button");
+        buttons.forEach(btn => btn.classList.remove("active"));
+        [...buttons].find(btn => btn.textContent === category)?.classList.add("active");
+
+        if (category === "All") {
+          renderProjects(allProjects);
+        } else {
+          renderProjects(allProjects.filter(p => p.category === category));
+        }
+      };
+
+      function renderProjects(projects) {
+        const container = document.getElementById("projectCards");
+        container.innerHTML = projects.map(data => `
+          <div class="col-lg-4 col-md-6 mb-4 d-flex" data-aos="fade-up">
+            <div class="project-card w-100">
+              <div class="img-wrapper">
+                <img src="${data.imageUrl}" alt="${data.title}" />
+              </div>
+              <div class="card-body">
+                <h5>${data.title}</h5>
+                ${data.docUrl ? `<button class='btn btn-sm btn-outline-light mt-2' onclick="openDoc('${data.docUrl}', '${data.title}')">Read the story</button>` : ""}
+              </div>
+            </div>
+          </div>
+        `).join("");
       }
 
       window.openDoc = async (url, title) => {
-        document.getElementById("docContent").innerHTML =
-          "<p class='text-center fw-semibold'>⏳ Loading document, please wait...</p>";
+        document.getElementById("docContent").innerHTML = "<p class='text-center fw-semibold'>⏳ Loading document, please wait...</p>";
         document.querySelector("#docModal .modal-title").textContent = title;
-
         const modal = new bootstrap.Modal(document.getElementById("docModal"));
         modal.show();
 
         try {
           const response = await fetch(url);
           const arrayBuffer = await response.arrayBuffer();
-
           const result = await mammoth.convertToHtml({ arrayBuffer });
-
           document.getElementById("docContent").innerHTML = result.value;
         } catch (err) {
-          document.getElementById("docContent").innerHTML =
-            "<p class='text-danger'>❌ Failed to load document.</p>";
+          document.getElementById("docContent").innerHTML = "<p class='text-danger'>❌ Failed to load document.</p>";
           console.error("Mammoth error:", err);
         }
       };
@@ -342,10 +277,7 @@ body::before {
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-      AOS.init({
-        duration: 800,
-        once: true,
-      });
+      AOS.init({ duration: 800, once: true });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
