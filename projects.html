@@ -101,7 +101,7 @@
 
       .project-card button:hover {
         background-color: #ffffff !important;
-        color: #000000;
+        color: #000000 !important;
       }
 
       .category-filter {
@@ -149,6 +149,19 @@
           padding: 1rem;
         }
       }
+      .project-card button {
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  border-radius: 50px;
+  padding: 4px 12px; /* smaller padding */
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+  box-shadow: none;
+  margin-left: 0; /* remove extra space */
+  width: auto !important;     /* allow width to fit content */
+}
+
     </style>
   </head>
   <body>
@@ -238,22 +251,34 @@
         }
       };
 
-      function renderProjects(projects) {
-        const container = document.getElementById("projectCards");
-        container.innerHTML = projects.map(data => `
-          <div class="col-lg-4 col-md-6 mb-4 d-flex" data-aos="fade-up">
-            <div class="project-card w-100">
-              <div class="img-wrapper">
-                <img src="${data.imageUrl}" alt="${data.title}" />
-              </div>
-              <div class="card-body">
-                <h5>${data.title}</h5>
-                ${data.docUrl ? `<button class='btn btn-sm btn-outline-light mt-2' onclick="openDoc('${data.docUrl}', '${data.title}')">Read the story</button>` : ""}
-              </div>
+function renderProjects(projects) {
+  const container = document.getElementById("projectCards");
+  container.innerHTML = projects.map(data => {
+    const clickable = data.docUrl
+      ? `onclick="openDoc('${data.docUrl}', '${data.title}')" style="cursor:pointer"`
+      : "";
+
+    return `
+      <div class="col-lg-4 col-md-6 mb-4 d-flex" data-aos="fade-up">
+        <div class="project-card w-100">
+          <div class="card-clickable" ${clickable}>
+            <div class="img-wrapper">
+              <img src="${data.imageUrl}" alt="${data.title}" />
+            </div>
+            <div class="card-body">
+              <h5>${data.title}</h5>
             </div>
           </div>
-        `).join("");
-      }
+          ${
+            data.docUrl
+              ? `<button class='btn btn-sm btn-outline-light mt-2 ms-2' onclick="openDoc('${data.docUrl}', '${data.title}')">Read the story</button>`
+              : ""
+          }
+        </div>
+      </div>
+    `;
+  }).join("");
+}
 
       window.openDoc = async (url, title) => {
         document.getElementById("docContent").innerHTML = "<p class='text-center fw-semibold'>⏳ Loading document, please wait...</p>";
