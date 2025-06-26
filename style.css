@@ -269,6 +269,50 @@ body::before {
     }
   }
 
+.project-card-sample {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  height: 300px;
+  background-color: #111;
+}
+
+.project-card-sample img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card-sample:hover img {
+  transform: scale(1.05);
+}
+
+.project-card-sample .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card-sample:hover .overlay {
+  opacity: 1;
+}
+
+.project-title {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 0 10px;
+}
+
+
+
 
   .service-card {
   background: transparent;
