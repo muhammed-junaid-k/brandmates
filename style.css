@@ -185,7 +185,7 @@ body::before {
 
     @media (max-width: 768px) {
     .hero {
-      height: 90vh;
+      height: 85vh;
       margin-bottom: 0;
     padding-bottom: 0;
     }
