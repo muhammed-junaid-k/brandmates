@@ -104,6 +104,8 @@ body::before {
 .hero {
       padding: 4rem 1rem;
       height: 87vh;
+        margin-bottom: 0;
+    padding-bottom: 0;
     }
 
     .hero-title {
@@ -184,6 +186,8 @@ body::before {
     @media (max-width: 768px) {
     .hero {
       height: 90vh;
+      margin-bottom: 0;
+    padding-bottom: 0;
     }
       .hero-title {
         padding-left: 0%;
@@ -256,10 +260,7 @@ body::before {
 }
 
 
-.scroll-track img:hover {
-  transform: scale(1.1);
-  opacity: 1;
-}
+
 
 @keyframes scrollLeft {
   0% {
@@ -270,10 +271,7 @@ body::before {
   }
 }
 
-/* Optional: pause on hover */
-.scroll-container:hover .scroll-track {
-  animation-play-state: paused;
-}
+
 
 
   .small-service-card {
