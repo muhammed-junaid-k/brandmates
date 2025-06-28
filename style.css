@@ -240,6 +240,21 @@ body::before {
   /* opacity: 0.8; */
   transition: transform 0.3s ease;
 }
+@media (max-width: 991.98px) {
+  .scroll-track img {
+    height: 24px; /* Smaller height for tablets & phones */
+  }
+  .scroll-track {
+  gap: 40px;
+}
+}
+
+@media (max-width: 576px) {
+  .scroll-track img {
+    height: 20px; /* Even smaller on very small devices */
+  }
+}
+
 
 .scroll-track img:hover {
   transform: scale(1.1);
