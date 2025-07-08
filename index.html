@@ -105,10 +105,10 @@
                 <a class="nav-link text-white" href="#home">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="#about">About</a>
+                <a class="nav-link text-white" href="#about">Who we are</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="#services">Services</a>
+                <a class="nav-link text-white" href="#services">What we do</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-white" href="#blog">Blog</a>
@@ -364,16 +364,16 @@
   <div class="scroll-container">
     <div class="scroll-track">
       <!-- First Set -->
-      <img src="/brands/brand5.png" alt="Brand 5" style="height: 50px" />
+      <img src="/brands/brand5.png" alt="Brand 5" />
       <img src="/brands/brand1.png" alt="Brand 1" />
       <img src="/brands/brand2.png" alt="Brand 2" />
-      <img src="/brands/brand7.png" alt="Brand 7" style="height: 50px" />
+      <img src="/brands/brand7.png" alt="Brand 7" />
       <img src="/brands/brand3.png" alt="Brand 3" />
       <img src="/brands/brand4.png" alt="Brand 4" />
       <img src="/brands/brand6.png" alt="Brand 6" />
       <img src="/brands/brand9.png" alt="Brand 9" />
       <img src="/brands/brand10.png" alt="Brand 10" />
-      <img src="/brands/brand8.png" alt="Brand 8" style="height: 40px" />
+      <img src="/brands/brand8.png" alt="Brand 8" />
       <img src="/brands/brand11.png" alt="Brand 11" />
       <img src="/brands/brand12.png" alt="Brand 12" />
 
@@ -1210,5 +1210,127 @@
         }, 1400); // Match fade-out transition duration
       }, 2700); // Delay before exit starts
     </script>
+
+
+<!-- 🌟 Floating Action Buttons -->
+<style>
+  .floating-actions {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 14px;
+    z-index: 9999;
+  }
+
+  .btn-floating {
+    width: 52px;
+    height: 52px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .btn-floating img {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Back to Top button */
+  .back-to-top {
+    background-color: #ffffff;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+  }
+
+  .back-to-top:hover {
+    transform: scale(1.1);
+  }
+
+  /* WhatsApp pulsing */
+  .whatsapp-btn {
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(225, 228, 35, 0.5);
+    }
+    70% {
+      transform: scale(1.05);
+      box-shadow: 0 0 0 10px rgba(225, 228, 35, 0);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(225, 228, 35, 0);
+    }
+  }
+
+  /* Initially hidden */
+  .floating-actions.d-none {
+    display: none !important;
+  }
+</style>
+
+<!-- Buttons Container -->
+<div id="floatingActions" class="floating-actions d-none">
+  <!-- Back to Top -->
+  <button
+    class="btn-floating back-to-top"
+    onclick="scrollToTop()"
+    title="Back to Top"
+  >
+    ↑
+  </button>
+
+  <!-- WhatsApp -->
+  <a
+    href="https://wa.me/919809241824"
+    class="btn-floating whatsapp-btn"
+    target="_blank"
+    title="Chat on WhatsApp"
+  >
+    <img
+      src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"
+      alt="WhatsApp"
+    />
+  </a>
+
+  <!-- Jotform Chatbot Mount Point -->
+  <div id="chatbotHolder" class="btn-floating" style="pointer-events: none"></div>
+</div>
+
+<!-- Script -->
+<script>
+  // Delay all buttons + chatbot
+  window.addEventListener("load", function () {
+    setTimeout(() => {
+      document.getElementById("floatingActions").classList.remove("d-none");
+
+      // Inject Jotform Chatbot script
+      const script = document.createElement("script");
+      script.src =
+        "https://cdn.jotfor.ms/agent/embedjs/0197de307f8171db8d6e86aa3cdf295edbba/embed.js?skipWelcome=1&maximizable=1";
+      script.async = true;
+      document.getElementById("chatbotHolder").appendChild(script);
+    }, 5000);
+  });
+
+  // Scroll to top
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+</script>
+
   </body>
 </html>
